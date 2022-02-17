@@ -1,0 +1,10 @@
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\bin\Debug\netcoreapp3.1\MB.Application.contracts.deps.json
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\bin\Debug\netcoreapp3.1\MB.Application.contracts.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\bin\Debug\netcoreapp3.1\MB.Application.contracts.pdb
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\obj\Debug\netcoreapp3.1\MB.Application.contracts.GeneratedMSBuildEditorConfig.editorconfig
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\obj\Debug\netcoreapp3.1\MB.Application.contracts.AssemblyInfoInputs.cache
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\obj\Debug\netcoreapp3.1\MB.Application.contracts.AssemblyInfo.cs
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\obj\Debug\netcoreapp3.1\MB.Application.contracts.csproj.CoreCompileInputs.cache
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\obj\Debug\netcoreapp3.1\MB.Application.contracts.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\obj\Debug\netcoreapp3.1\MB.Application.contracts.pdb
+F:\Practice\MasterBlog\MasterBlogger\MB.Application.contracts\obj\Debug\netcoreapp3.1\MB.Application.contracts.csproj.AssemblyReference.cache
