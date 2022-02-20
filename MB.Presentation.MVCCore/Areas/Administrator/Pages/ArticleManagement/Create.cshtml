@@ -1,0 +1,56 @@
+﻿@page
+@model MB.Presentation.MVCCore.Areas.Administrator.Pages.ArticleManagement.CreateModel
+@{
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h2>Create New Article</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="row">
+                        
+                        <div class="col-md-6 form-group">
+                            <label for="Title" class="control-label">نام</label>
+                            <input class="form-control" type="text" id="Title" name="Title"/>
+                        </div>
+                        
+                        <div class="col-md-6 form-group">
+                            <label for="ShortDescription" class="control-label">توضیح مختصر</label>
+                            <input class="form-control" type="text" id="ShortDescription" name="ShortDescription"/>
+                        </div>
+                        
+                        
+                        
+                        <div class="col-md-6 form-group">
+                            <label for="Img" class="control-label">عکس</label>
+                            <input class="form-control" id="Img" name="Img"/>
+                        </div>
+                        
+                        <div class="col-md-6 form-group">
+                            <label for="Content" class="control-label">محتوا</label>
+                            <input class="form-control" type="text" id="Content" name="Content"/>
+                        </div>
+                        
+
+                        <label class="control-label" for="ArticleCategoryId">گروه</label>
+                        <select asp-items="@Model.ArticleCategorySelectList" class="form-control" id="ArticleCategoryId" name="ArticleCategoryId">
+                            <option value="0">گروه محصولات را مشخص کنید</option>
+                        </select>
+                         
+                        <div class="col-md-12 form-group">
+
+                            <button type="submit" value="Create" class="btn btn-success">ایجاد</button>
+                            <a class="btn btn-dark" asp-page="./List" asp-area="Administrator">بازگشت</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

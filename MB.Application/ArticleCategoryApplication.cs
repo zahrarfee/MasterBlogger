@@ -74,5 +74,10 @@ namespace MB.Application
             articleCategory.Restore(id);
             _articleCategoryRepository.SaveChange();
         }
+
+        public List<ArticleCategoryViewModel> GetList()
+        {
+            return _articleCategoryRepository.GetList();
+        }
     }
 }

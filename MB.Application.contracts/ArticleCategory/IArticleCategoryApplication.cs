@@ -11,5 +11,6 @@ namespace MB.Application.contracts.ArticleCategory
         EditArticleCategory GetDetails(int id);
         void Remove(int id);
         void Restore(int id);
+        List<ArticleCategoryViewModel> GetList();
     }
 }

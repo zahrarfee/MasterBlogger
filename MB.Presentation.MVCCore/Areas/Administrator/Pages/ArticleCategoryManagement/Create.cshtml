@@ -2,17 +2,31 @@
 @model MB.Presentation.MVCCore.Areas.Administrator.Pages.ArticleCategoryManagement.CreateModel
 @{
 }
+
+<div class="card">
+<div class="card-header">
+    <h2>Create New Article Category</h2>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-md-12">
 <form method="post">
     <div class="row">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="col-md-6 form-group">
-            <label for="title">نام</label>
-            <input class="form-control" type="text" id="title" name="title" />
+            <label for="Title" class="control-label">نام</label>
+            <input class="form-control" type="text" id="Title" name="Title" />
         </div>
 
         <div class="col-md-12 form-group">
-           
-            <button type="submit" class="btn btn-success">ایجاد</button>
+
+            <button type="submit" value="Create" class="btn btn-success">ایجاد</button>
+            <a class="btn btn-dark" asp-page="./List" asp-area="Administrator">بازگشت</a>
         </div>
     </div>
 
 </form>
+</div>
+</div>
+</div>
+</div>

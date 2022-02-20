@@ -54,5 +54,14 @@ namespace MB.Infrastructure.EFCore.Repository
         {
             return _masterBloggerContext.ArticleCategories.Any(x => x.Title == title);
         }
+
+        public List<ArticleCategoryViewModel> GetList()
+        {
+            return _masterBloggerContext.ArticleCategories.Select(x => new ArticleCategoryViewModel()
+            {
+                Id = x.Id,
+                Title = x.Title
+            }).ToList();
+        }
     }
 }

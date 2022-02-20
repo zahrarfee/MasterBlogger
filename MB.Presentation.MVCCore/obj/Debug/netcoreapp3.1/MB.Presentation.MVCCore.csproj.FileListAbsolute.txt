@@ -95,3 +95,6 @@ F:\Practice\MasterBlog\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\netcoreap
 F:\Practice\MasterBlog\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\netcoreapp3.1\MB.Presentation.MVCCore.genruntimeconfig.cache
 F:\Practice\MasterBlog\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\netcoreapp3.1\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Create.cshtml.g.cs
 F:\Practice\MasterBlog\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\netcoreapp3.1\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Edit.cshtml.g.cs
+F:\Practice\MasterBlog\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\netcoreapp3.1\Razor\Areas\Administrator\Pages\ArticleManagement\Create.cshtml.g.cs
+F:\Practice\MasterBlog\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\netcoreapp3.1\Razor\Areas\Administrator\Pages\ArticleManagement\List.cshtml.g.cs
+F:\Practice\MasterBlog\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\netcoreapp3.1\Razor\Areas\Administrator\Pages\ArticleManagement\Edit.cshtml.g.cs

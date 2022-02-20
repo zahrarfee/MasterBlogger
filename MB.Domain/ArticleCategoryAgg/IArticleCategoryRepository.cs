@@ -14,6 +14,8 @@ namespace MB.Domain.ArticleCategoryAgg
         ArticleCategory Get(int id);
         EditArticleCategory GetDetails(int id);
         bool Exists(string title);
+        List<ArticleCategoryViewModel> GetList();
+
 
     }
 }
