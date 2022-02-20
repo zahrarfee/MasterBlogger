@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MB.Domain.ArticleAgg;
+using MB.Domain.ArticleCategoryAgg.Services;
 
 
 namespace MB.Domain.ArticleCategoryAgg
@@ -14,8 +15,13 @@ namespace MB.Domain.ArticleCategoryAgg
 
         public ICollection<Article> Articles { get; private set; }
 
-        public ArticleCategory(string title)
+        protected ArticleCategory()
         {
+
+        }
+        public ArticleCategory(string title,IArticleCategoryValidationService articleCategoryValidationService)
+        {
+            articleCategoryValidationService.CheckThisRecordIsExists(title);
             GuardAgainstEmptyTitle(title);
             
             Title = title;

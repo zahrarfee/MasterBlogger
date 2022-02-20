@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using MB.Application.contracts.ArticleCategory;
 using MB.Domain.ArticleCategoryAgg;
+using MB.Domain.ArticleCategoryAgg.Services;
 
 
 namespace MB.Application
@@ -10,16 +11,16 @@ namespace MB.Application
     public class ArticleCategoryApplication:IArticleCategoryApplication
     {
         private readonly IArticleCategoryRepository _articleCategoryRepository;
-       
-        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository)
+        private readonly IArticleCategoryValidationService _articleCategoryValidationService;
+        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository, IArticleCategoryValidationService articleCategoryValidationService)
         {
             _articleCategoryRepository = articleCategoryRepository;
-            
+            _articleCategoryValidationService = articleCategoryValidationService;
         }
 
         public void Create(CreateArticleCategory command)
         {
-            var articleCategory=new  ArticleCategory(command.Title);
+            var articleCategory=new  ArticleCategory(command.Title,_articleCategoryValidationService);
             _articleCategoryRepository.Create(articleCategory);
             _articleCategoryRepository.SaveChange();
         }

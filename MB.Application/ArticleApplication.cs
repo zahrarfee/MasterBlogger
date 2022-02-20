@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Text;
 using MB.Application.contracts.Article;
 using MB.Domain.ArticleAgg;
+using MB.Domain.ArticleAgg.Services;
 
 namespace MB.Application
 {
     public class ArticleApplication:IArticleApplication
     {
         private readonly IArticleRepository _articleRepository;
+        private readonly IArticleValidationServices _articleValidationServices;
 
-        public ArticleApplication(IArticleRepository articleRepository)
+        public ArticleApplication(IArticleRepository articleRepository, IArticleValidationServices articleValidationServices)
         {
             _articleRepository = articleRepository;
+            _articleValidationServices = articleValidationServices;
         }
 
         public void Create(CreateArticle command)
         {
-            var article = new Article(command.Title,command.ShortDescription,command.Img,command.Content,command.ArticleCategoryId);
+            var article = new Article(command.Title,command.ShortDescription,command.Img,command.Content,command.ArticleCategoryId,_articleValidationServices);
             _articleRepository.Create(article);
             _articleRepository.SaveChange();
         }

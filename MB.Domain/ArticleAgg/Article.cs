@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MB.Domain.ArticleAgg.Services;
 using MB.Domain.ArticleCategoryAgg;
 
 namespace MB.Domain.ArticleAgg
@@ -21,8 +22,11 @@ namespace MB.Domain.ArticleAgg
         {
 
         }
-        public Article(string title, string shortDescription, string img, string content, int articleCategoryId)
+        public Article(string title, string shortDescription, string img, string content, int articleCategoryId, IArticleValidationServices articleValidationServices)
         {
+            Validate(title, articleCategoryId);
+            articleValidationServices.CheckThisRecordIsExists(title);
+
             Title = title;
             ShortDescription = shortDescription;
             Img = img;
@@ -31,8 +35,19 @@ namespace MB.Domain.ArticleAgg
             IsDeleted = false;
             CreationDate=DateTime.Now;
         }
+
+        private static void Validate(string title, int articleCategoryId)
+        {
+            if (string.IsNullOrWhiteSpace(title))
+                throw new ArgumentNullException();
+            if (articleCategoryId == 0)
+                throw new ArgumentOutOfRangeException();
+        }
+
         public void Edit(string title, string shortDescription, string img, string content, int articleCategoryId)
         {
+            
+            Validate(title, articleCategoryId);
             Title = title;
             ShortDescription = shortDescription;
             Img = img;
