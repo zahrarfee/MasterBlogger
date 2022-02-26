@@ -17,3 +17,5 @@ F:\Practice\MasterBlog\MasterBlogger\MB.Infrastruture.Core\obj\Debug\netcoreapp3
 F:\Practice\MasterBlog\MasterBlogger\MB.Infrastruture.Core\obj\Debug\netcoreapp3.1\MB.Infrastructure.Core.csproj.CopyComplete
 F:\Practice\MasterBlog\MasterBlogger\MB.Infrastruture.Core\obj\Debug\netcoreapp3.1\MB.Infrastructure.Core.dll
 F:\Practice\MasterBlog\MasterBlogger\MB.Infrastruture.Core\obj\Debug\netcoreapp3.1\MB.Infrastructure.Core.pdb
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastruture.Core\bin\Debug\netcoreapp3.1\MB.Infrastructure.Query.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastruture.Core\bin\Debug\netcoreapp3.1\MB.Infrastructure.Query.pdb

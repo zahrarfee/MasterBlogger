@@ -1,0 +1,17 @@
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Infrastructure.Query.deps.json
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Infrastructure.Query.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Infrastructure.Query.pdb
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Application.contracts.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Domain.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Infrastructure.EFCore.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Infrastructure.EFCore.pdb
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Application.contracts.pdb
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\bin\Debug\netcoreapp3.1\MB.Domain.pdb
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.csproj.AssemblyReference.cache
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.GeneratedMSBuildEditorConfig.editorconfig
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.AssemblyInfoInputs.cache
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.AssemblyInfo.cs
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.csproj.CoreCompileInputs.cache
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.csproj.CopyComplete
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.dll
+F:\Practice\MasterBlog\MasterBlogger\MB.Infrastructure.Query\obj\Debug\netcoreapp3.1\MB.Infrastructure.Query.pdb
