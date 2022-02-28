@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MB.Domain.CommentAgg;
 using MB.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,7 +25,8 @@ namespace MB.Infrastructure.Query
                     ShortDescription = x.ShortDescription,
                     CreationDate = x.CreationDate.ToString(),
                     Img = x.Img,
-                    ArticleCategory = x.ArticleCategory.Title
+                    ArticleCategory = x.ArticleCategory.Title,
+                    CommentsCount = x.Comments.Count
                 }).ToList();
         }
 
@@ -39,8 +41,35 @@ namespace MB.Infrastructure.Query
                 CreationDate = x.CreationDate.ToString(),
                 Img = x.Img,
                 ArticleCategory = x.ArticleCategory.Title,
-                Content = x.Content
+                Content = x.Content,
+                CommentsCount = x.Comments.Count,
+                Comments = MapComments(x.Comments.Where(x=>x.Status==Statuses.Confirmed))
+
             }).FirstOrDefault(x=>x.Id==id);
+        }
+
+        private static List<CommentsQueryView> MapComments(IEnumerable<Comment> comments)
+        {
+            //var result = new List<CommentsQueryView>();
+            //foreach (var item in comments)
+            //{
+            //    result.Add(new CommentsQueryView
+            //    {
+            //        Name = item.Name,
+            //        CreationDate = item.CreationDate.ToString(),
+            //        Message = item.Message
+
+            //    });
+            //}
+
+            //return result;
+            return comments.Select(x => new CommentsQueryView
+            {
+                Name =x.Name,
+                CreationDate = x.ToString(),
+                Message = x.Message
+
+            }).ToList();
         }
     }
 }

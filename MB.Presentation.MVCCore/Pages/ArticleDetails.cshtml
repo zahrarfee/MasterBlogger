@@ -35,12 +35,13 @@
                     </p>
                     @Model.articleQueryView.Content
                 </div>
-
-
                 <div class="post-comments">
                     <header>
-                        <h3 class="h6">Post Comments<span class="no-of-comments"></span></h3>
+                        <h3 class="h6">@Model.articleQueryView.CommentsCount<span class="no-of-comments"></span></h3>
                     </header>
+                @foreach (var item in Model.articleQueryView.Comments)
+                {
+                
                    
                         <div class="comment">
                             <div class="comment-header d-flex justify-content-between">
@@ -49,16 +50,18 @@
                                         <img src="~/img/user.svg" alt="..." class="img-fluid rounded-circle">
                                     </div>
                                     <div class="title">
-                                        <strong></strong><span class="date"></span>
+                                        <strong>@item.Name</strong><span class="date">@item.CreationDate</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="comment-body">
-                                <p></p>
+                                <p>@item.Message</p>
                             </div>
                         </div>
                    
 
+                 
+                }
                 </div>
 
                 <div class="add-comment">
@@ -68,15 +71,18 @@
                     <form class="commenting-form" method="post">
                         <div class="row">
                             <div class="form-group col-md-6">
+                                <label for="Name">نام</label>
                                 <input type="text" name="Name" id="Name" placeholder="Name" class="form-control">
                             </div>
                             <div class="form-group col-md-6">
+                                <label for="Email">ایمیل</label>
                                 <input type="email" name="Email" id="Email" placeholder="Email Address (will not be published)" class="form-control">
                             </div>
                             <div class="form-group col-md-12">
+                                <label for="Message">متن</label>
                                 <textarea name="Message" id="Message" placeholder="Type your comment" class="form-control"></textarea>
                             </div>
-                            <input type="hidden" name="ArticleId" value=""/>
+                            <input type="hidden" name="ArticleId" value="@Model.articleQueryView.Id"/>
                             <div class="form-group col-md-12">
                                 <button type="submit" class="btn btn-secondary">Submit Comment</button>
                             </div>

@@ -1,6 +1,7 @@
 ﻿ using System;
+ using System.Collections.Generic;
 
-namespace MB.Infrastructure.Query
+ namespace MB.Infrastructure.Query
 {
     public class ArticleQueryView
     {
@@ -11,5 +12,7 @@ namespace MB.Infrastructure.Query
         public string ArticleCategory { get; set; }
         public  string Img { get; set; }
         public string Content { get; set; }
+        public int CommentsCount { get; set; }
+        public List<CommentsQueryView> Comments { get; set; }
     }
 }

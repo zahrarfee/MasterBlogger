@@ -1,0 +1,95 @@
+﻿@page
+@using MB.Domain.CommentAgg
+@model MB.Presentation.MVCCore.Areas.Administrator.Pages.CommentManagement.ListModel
+@{
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="float-left">Comment List</h3>
+        @*<div class="float-right">
+            <a class="btn btn-success" asp-page="./Create" asp-area="Administrator">Add New</a>
+        </div>*@
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>CreationDate</th>
+                <th>Article</th>
+                <th>Status</th>
+
+                <th>Operations</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var comment in Model.Comments)
+            {
+                <tr>
+                    <td>@comment.Id</td>
+                    <td>@comment.Name</td>
+                    <td>@comment.Email</td>
+                    <td>@comment.Message</td>
+                    <td>@comment.CreationDate</td>
+                    <td>@comment.Article</td>
+                    <td>
+                        @if (comment.Status == Statuses.New)
+                        {
+                            <i class="fa fa-eye fa-2x text-info"></i>
+                        }
+                        @if (comment.Status == Statuses.Confirmed)
+                        {
+                            <i class="fa fa-check fa-2x text-success"></i>
+                        }
+                        @if (comment.Status == Statuses.Canceled)
+                        {
+                            <i class="fa fa-close fa-2x text-danger"></i>
+                        }
+                    </td>
+
+
+                    <td>
+                        @if (comment.Status == Statuses.New)
+                        {
+                        <div class="row">
+                            <div class="col-6"> <a class="btn btn-success " asp-page-handler="Confirmed" asp-route-id="@comment.Id">Confirm</a></div>
+                            <div class="col-6"><a class="btn btn-danger " asp-page-handler="Canceled" asp-route-id="@comment.Id">Cancel</a> </div>
+                        </div>
+                                
+                           
+                          
+                                
+                            
+                        }
+                        @if (comment.Status == Statuses.Confirmed)
+                        {
+                            <a class="btn btn-danger float-left" asp-page-handler="Canceled" asp-route-id="@comment.Id">Cancel</a>
+                        }
+                        @if (comment.Status == Statuses.Canceled)
+                        {
+                            <a class="btn btn-success float-left" asp-page-handler="Confirmed" asp-route-id="@comment.Id">Confirm</a>
+                        }
+                    </td>
+                    @*<td>
+            <a class="btn btn-warning float-left mr-3" asp-page="./Edit" asp-route-id="@comment.Id">Rename</a>
+            @if (comment.IsDeleted)
+            {
+                <a class="btn btn-success float-left" asp-page-handler="Activate" asp-route-id="@comment.Id">Activate</a>
+
+            }
+            else
+            {
+                <a class="btn btn-danger float-left" asp-page-handler="Remove" asp-route-id="@comment.Id">Remove</a>
+
+            }
+        </td>*@
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
